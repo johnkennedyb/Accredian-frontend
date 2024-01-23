@@ -1,26 +1,26 @@
 // App.js
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './login';
-import Signup from './Signup';
-import Home from './Home'; // Correct the import path
+
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from "./Home"
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/home" element={<Home />} />
-        </Routes>
+        <Navbar />
+        <div className='content'>
+        <Home />
+        </div>
+      
+        
       </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-
 
 
 
